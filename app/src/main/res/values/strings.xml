@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">t3a3-climent-pablo</string>
+    <string name="entrar">Entrar</string>
+    <string name="salir">Salir</string>
+    <string name="introduce_la_contrase_a">Introduce la contraseña</string>
+    <string name="introduce_el_usuario">Introduce el usuario</string>
+    <string name="iniciar_sesi_n">Iniciar sesión</string>
+    <string name="bienvenido_a">Bienvenido/a</string>
+    <string name="banco">Banco</string>
+    <string name="posicion_global">Posicion global</string>
+    <string name="movimientos">Movimientos</string>
+    <string name="transferencias">Transferencias</string>
+    <string name="cambiar_clave">Cambiar contraseña</string>
+    <string name="promociones">Promociones</string>
+    <string name="cajeros">Cajeros</string>
+    <string name="bienvenido_a_mi_banco">Bienvenido/a a mi banco</string>
+    <string name="n_mero_de_cuenta">Número de cuenta</string>
+    <string name="saldo">Saldo: 0.00 €</string>
+    <string name="elige_cuenta">Elige tu cuenta:</string>
+    <string name="cuenta_propia">Cuenta propia</string>
+    <string name="cuenta_ajena">Cuenta ajena</string>
+    <string name="escribe_el_n_m_cuenta_ajena">Escribe el núm. cuenta ajena</string>
+    <string name="cantidad">Cantidad:</string>
+    <string name="enviar_justificante">Enviar justificante</string>
+    <string name="enviar">Enviar</string>
+    <string name="cancelar">Cancelar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cuenta_destino">Cuenta destino</string>
+    <string name="importe">Importe</string>
+    <string name="realizar_transferencia">Realizar Transferencia</string>
+    <string name="icono_banco">icono banco</string>
+    <string name="ltimos_movimientos">Últimos Movimientos</string>
+    <string name="posici_n_global">Posición Global</string>
+    <string name="cuentas">Cuentas:</string>
+    <string name="aplicaci_n_del_banco_bienvenido_a">Aplicación del banco, bienvenido/a</string>
+    <string name="home">Home</string>
+    <string name="settings">Configuración</string>
+    <string name="open_nav_drawer">Abrir menú</string>
+    <string name="close_nav_drawer">Cerrar menú</string>
+    <string name="multimedia_category">Multimedia</string>
+    <string name="language_category">Language</string>
+    <string name="data_category">Data</string>
+
+    <!-- Options -->
+    <string name="music">Musica</string>
+    <string name="music_summary">No escuchar musica mientras la aplicacion se esta ejecutando</string>
+    <string name="welcome_video">Welcome video</string>
+    <string name="welcome_video_summary">No ver video mientras se ejecuta la aplicacion</string>
+    <string name="language">Idioma de la app</string>
+    <string name="data_source">Data</string>
+    <string name="open">Open\n</string>
+    <string name="close">Close</string>
+</resources>

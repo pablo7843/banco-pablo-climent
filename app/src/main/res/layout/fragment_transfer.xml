@@ -1,0 +1,155 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:padding="16dp">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/textViewTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transferencias"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Elige tu cuenta label -->
+        <TextView
+            android:id="@+id/textViewEligeCuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/elige_cuenta"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitulo"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Spinner de cuenta origen -->
+        <Spinner
+            android:id="@+id/spinnerCuentaOrigen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/cuentas"
+            app:layout_constraintTop_toBottomOf="@id/textViewEligeCuenta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Grupo de RadioButtons -->
+        <RadioGroup
+            android:id="@+id/radioGroupTipoCuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/spinnerCuentaOrigen"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp">
+
+            <RadioButton
+                android:id="@+id/radioButtonCuentaPropia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cuenta_propia"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radioButtonCuentaAjena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cuenta_ajena"
+                android:layout_marginStart="16dp" />
+        </RadioGroup>
+
+        <!-- Spinner de cuenta destino -->
+        <Spinner
+            android:id="@+id/spinnerCuentaDestino"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/cuentas"
+            app:layout_constraintTop_toBottomOf="@id/radioGroupTipoCuenta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Campo de texto para cuenta ajena -->
+        <EditText
+            android:id="@+id/editTextCuentaAjena"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/escribe_el_n_m_cuenta_ajena"
+            android:inputType="text"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/radioGroupTipoCuenta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Layout horizontal para cantidad y moneda -->
+        <LinearLayout
+            android:id="@+id/linearLayoutCantidadMoneda"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/spinnerCuentaDestino"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp">
+
+            <!-- EditText para cantidad -->
+            <EditText
+                android:id="@+id/editTextCantidad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/cantidad"
+                android:inputType="numberDecimal" />
+
+            <!-- Spinner para moneda -->
+            <Spinner
+                android:id="@+id/spinnerMoneda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/moneda"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Checkbox de justificante -->
+        <CheckBox
+            android:id="@+id/checkBoxJustificante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enviar_justificante"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutCantidadMoneda"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Botones de enviar y cancelar -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/checkBoxJustificante"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/buttonEnviar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/enviar"
+                android:backgroundTint="@color/purple" />
+
+            <Button
+                android:id="@+id/buttonCancelar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cancelar"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>

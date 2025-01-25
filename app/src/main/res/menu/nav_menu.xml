@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/nav_posicion_global"
+            android:icon="@drawable/baseline_balance_24"
+            android:title="@string/posicion_global" />
+        <item
+            android:id="@+id/nav_movimientos"
+            android:icon="@drawable/baseline_work_outline_24"
+            android:title="@string/movimientos" />
+
+        <item
+            android:id="@+id/nav_transferencias"
+            android:icon="@drawable/baseline_compare_arrows_24"
+            android:title="@string/transferencias" />
+
+        <item
+            android:id="@+id/nav_change_password"
+            android:icon="@drawable/baseline_password_24"
+            android:title="@string/cambiar_clave" />
+
+        <item
+            android:id="@+id/nav_promociones"
+            android:icon="@drawable/baseline_shopping_bag_24"
+            android:title="@string/promociones" />
+
+        <item
+            android:id="@+id/nav_cajeros"
+            android:icon="@drawable/baseline_currency_exchange_24"
+            android:title="@string/cajeros" />
+
+
+
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/baseline_settings_24"
+            android:title="@string/settings" />
+
+    </group>
+
+    <item
+        android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/baseline_logout_24"
+                android:title="@string/salir" />
+        </menu>
+    </item>
+
+</menu>

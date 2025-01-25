@@ -1,0 +1,48 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Multimedia Category -->
+    <PreferenceCategory
+        app:title="@string/multimedia_category"
+        app:icon="@android:drawable/ic_media_play">
+
+        <SwitchPreferenceCompat
+            app:key="music"
+            app:title="@string/music"
+            app:summary="@string/music_summary"
+            app:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            app:key="welcome_video"
+            app:title="@string/welcome_video"
+            app:summary="@string/welcome_video_summary"
+            app:defaultValue="true" />
+    </PreferenceCategory>
+
+    <!-- Language Category -->
+    <PreferenceCategory
+        app:title="@string/language_category"
+        app:icon="@android:drawable/ic_menu_preferences">
+
+        <ListPreference
+            app:key="language"
+            app:title="@string/language"
+            app:dialogTitle="@string/language"
+            app:entries="@array/language_options"
+            app:entryValues="@array/language_values"
+            app:defaultValue="es" />
+    </PreferenceCategory>
+
+    <!-- Data Source Category -->
+    <PreferenceCategory
+        app:title="@string/data_category"
+        app:icon="@android:drawable/ic_menu_manage">
+
+        <ListPreference
+            app:key="data_source"
+            app:title="@string/data_source"
+            app:dialogTitle="@string/data_source"
+            app:entries="@array/data_source_options"
+            app:entryValues="@array/data_source_values"
+            app:defaultValue="local" />
+    </PreferenceCategory>
+</PreferenceScreen>

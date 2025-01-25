@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.MainActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gris_medio"
+                    app:titleTextColor="@android:color/white" />
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/appBar">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/welcome_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.circularreveal.CircularRevealLinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <!-- Avatar del usuario -->
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/fotoUsuario"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/avatar"
+                            android:contentDescription="Avatar"/>
+
+                        <!-- Mensaje de bienvenida -->
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvWelcomeMessage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/bienvenido_a"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+                    </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Contenedor de botones -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/operations_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/listaBotones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <!-- Botón para Posicion Globlal -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_posicion_global"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/posicion_global"
+                            android:layout_marginBottom="8dp"
+                            app:cornerRadius="100dp" />
+
+                        <!-- Botón para Movimientos -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_movimientos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/movimientos"
+                            android:layout_marginBottom="8dp"
+                            app:cornerRadius="100dp"/>
+
+                        <!-- Botón para Transferencias -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_transferencias"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/transferencias"
+                            android:layout_marginBottom="8dp"
+                            app:cornerRadius="100dp" />
+
+                        <!-- Botón para ChangePassword -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_cambiar_clave"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cambiar_clave"
+                            android:layout_marginBottom="8dp"
+                            app:cornerRadius="100dp" />
+
+                        <!-- Botón para Promociones -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_promociones"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/promociones"
+                            android:layout_marginBottom="8dp"
+                            app:cornerRadius="100dp" />
+
+                        <!-- Botón para Cajeros -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_cajeros"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cajeros"
+                            android:layout_marginBottom="8dp"
+                            app:cornerRadius="100dp" />
+
+                        <!-- Botón para Salir -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_salir"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/salir"
+                            app:cornerRadius="100dp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/gris_claro"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="16dp"
+            app:fabCradleVerticalOffset="10dp">
+
+            <!-- Botón flotante de banco -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/banco"
+                app:srcCompat="@drawable/baseline_account_balance_24" />
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/nav_menu"
+        app:headerLayout="@layout/nav_header"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cuentas">Cuentas</string-array>
+    <string-array name="moneda">
+        <item>EUR</item>
+        <item>USD</item>
+        <item>GBP</item>
+    </string-array>
+
+    <string-array name="language_options">
+        <item>Español</item>
+        <item>English</item>
+    </string-array>
+    <string-array name="language_values">
+        <item>es</item>
+        <item>en</item>
+    </string-array>
+
+    <string-array name="data_source_options">
+        <item>Base de datos local</item>
+        <item>Servicio Web</item>
+    </string-array>
+    <string-array name="data_source_values">
+        <item>Local</item>
+        <item>Web</item>
+    </string-array>
+</resources>

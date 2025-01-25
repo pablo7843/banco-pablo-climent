@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.T3a3climentpablo" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/gris_medio</item>
+        <item name="colorSecondary">@color/purple</item>
+        <item name="colorError">@color/rojo</item>
+    </style>
+
+    <style name="Theme.T3a3climentpablo" parent="Base.Theme.T3a3climentpablo" />
+</resources>

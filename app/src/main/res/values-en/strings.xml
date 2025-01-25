@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">t3a3-climent-pablo</string>
+    <string name="entrar">Enter</string>
+    <string name="salir">Exit</string>
+    <string name="introduce_la_contrase_a">Enter the password</string>
+    <string name="introduce_el_usuario">Enter the username</string>
+    <string name="iniciar_sesi_n">Log in</string>
+    <string name="bienvenido_a">Welcome</string>
+    <string name="banco">Bank</string>
+    <string name="posicion_global">Global Position</string>
+    <string name="movimientos">Movements</string>
+    <string name="transferencias">Transfers</string>
+    <string name="cambiar_clave">Change password</string>
+    <string name="promociones">Promotions</string>
+    <string name="cajeros">ATMs</string>
+    <string name="bienvenido_a_mi_banco">Welcome to my bank</string>
+    <string name="n_mero_de_cuenta">Account number</string>
+    <string name="saldo">Balance: 0.00 €</string>
+    <string name="elige_cuenta">Choose your account:</string>
+    <string name="cuenta_propia">Own account</string>
+    <string name="cuenta_ajena">External account</string>
+    <string name="escribe_el_n_m_cuenta_ajena">Enter external account number</string>
+    <string name="cantidad">Amount:</string>
+    <string name="enviar_justificante">Send receipt</string>
+    <string name="enviar">Send</string>
+    <string name="cancelar">Cancel</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cuenta_destino">Destination account</string>
+    <string name="importe">Amount</string>
+    <string name="realizar_transferencia">Make transfer</string>
+    <string name="icono_banco">bank icon</string>
+    <string name="ltimos_movimientos">Latest Transactions</string>
+    <string name="posici_n_global">Global Position</string>
+    <string name="cuentas">Accounts:</string>
+    <string name="aplicaci_n_del_banco_bienvenido_a">Bank application, welcome</string>
+    <string name="home">Home</string>
+    <string name="settings">Settings</string>
+    <string name="open_nav_drawer">Open menu</string>
+    <string name="close_nav_drawer">Close menu</string>
+
+    <string name="multimedia_category">Multimedia</string>
+    <string name="language_category">Language</string>
+    <string name="data_category">Data</string>
+
+    <!-- Options -->
+    <string name="music">Music</string>
+    <string name="music_summary">Don´t listen to music while the application is running</string>
+    <string name="welcome_video">Welcome video</string>
+    <string name="welcome_video_summary">Don´t play a video when starting the app</string>
+    <string name="language">App language</string>
+    <string name="data_source">Data source</string>
+    <string name="open">Open\n</string>
+    <string name="close">Close</string>
+
+</resources>
