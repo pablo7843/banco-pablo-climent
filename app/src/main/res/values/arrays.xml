@@ -2,14 +2,14 @@
 <resources>
     <string-array name="cuentas">Cuentas</string-array>
     <string-array name="moneda">
-        <item>EUR</item>
-        <item>USD</item>
-        <item>GBP</item>
+        <item name="euros">€</item>
+        <item name="dolares">$</item>
+        <item name="libra">£</item>
     </string-array>
 
     <string-array name="language_options">
-        <item>Español</item>
-        <item>English</item>
+        <item name="espanyol">Español</item>
+        <item name="english">English</item>
     </string-array>
     <string-array name="language_values">
         <item>es</item>

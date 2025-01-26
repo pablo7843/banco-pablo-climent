@@ -32,6 +32,8 @@ class MovementsActivity : AppCompatActivity(), MovementsAdapter.OnMovementClickL
         cuentasDelCliente = bancoOp?.getCuentas(cliente) as? List<Cuenta> ?: emptyList()
         Log.d("MovementsActivity", "Cuentas del cliente: $cuentasDelCliente")
 
+        //esta mierda no me ha ido por semanas porque el binding spinnerMovimientos estaba al final del onCreate, me quiero pegar un tiro
+
         // Listener para actualizar movimientos al seleccionar una cuenta
         binding.spinnerMovimientos.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: android.view.View?, position: Int, id: Long) {
@@ -46,7 +48,7 @@ class MovementsActivity : AppCompatActivity(), MovementsAdapter.OnMovementClickL
             updateMovements(cuentasDelCliente[0])
         }
 
-        // Configurar el Spinner con las cuentas
+        // Spinner
         val cuentasNombres = cuentasDelCliente.map {
             "${it.getBanco()}-${it.getDc()}-${it.getSucursal()}-${it.getNumeroCuenta()}"
         }
@@ -55,13 +57,14 @@ class MovementsActivity : AppCompatActivity(), MovementsAdapter.OnMovementClickL
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         binding.spinnerMovimientos.adapter = spinnerAdapter
 
-        // Configurar RecyclerView
+        //recyclerView
         binding.recViewMovimientos.layoutManager = LinearLayoutManager(this)
         binding.recViewMovimientos.adapter = movimientosAdapter
 
 
     }
 
+    //actualizar los movimientos
     private fun updateMovements(cuenta: Cuenta) {
         val bancoOperacional = MiBancoOperacional.getInstance(this)
         val movimientos = bancoOperacional?.getMovimientos(cuenta) ?: emptyList()

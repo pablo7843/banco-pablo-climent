@@ -52,5 +52,6 @@
     <string name="data_source">Data source</string>
     <string name="open">Open\n</string>
     <string name="close">Close</string>
+    <string name="escribeCuenta">Write the account number:</string>
 
 </resources>
