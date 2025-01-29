@@ -13,8 +13,10 @@ import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.t3a3_climent_pablo.AtmApplication
 import com.example.t3a3_climent_pablo.R
 import com.example.t3a3_climent_pablo.databinding.ActivityMainBinding
+import com.example.t3a3_climent_pablo.entity.CajeroEntity
 import com.example.t3a3_climent_pablo.fragments.GlobalPositionFragment
 import com.example.t3a3_climent_pablo.pojo.Cliente
 import com.google.android.material.navigation.NavigationView
@@ -28,10 +30,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+
+        Thread{
+
+            val atmEntityLists : List<CajeroEntity> = listOf(
+                CajeroEntity(direccion = "Carrer del Clariano, 1, 46021 Valencia, Valencia, España", latitud = 39.47600769999999, longitud = -0.3524475000000393, zoom = ""),
+                CajeroEntity(direccion = "Avinguda del Cardenal Benlloch, 65, 46021 València, Valencia, España", latitud = 39.4710366, longitud = -0.3547525000000178, zoom = ""),
+                CajeroEntity(direccion = "Av. del Port, 237, 46011 València, Valencia, España", latitud = 39.46161999999999, longitud = -0.3376299999999901, zoom = ""),
+                CajeroEntity(direccion = "Carrer del Batxiller, 6, 46010 València, Valencia, España", latitud = 39.4826729, longitud = -0.3639118999999482, zoom = ""),
+                CajeroEntity(direccion = "Av. del Regne de València, 2, 46005 València, Valencia, España", latitud = 39.4647669, longitud = -0.3732760000000326, zoom = "")
+            )
+            AtmApplication.database.CajeroDAO().insertAll(atmEntityLists)
+        }.start()
+
         // Recibir cliente desde el intent
         val cliente = intent.getSerializableExtra("Cliente") as Cliente
         binding.tvWelcomeMessage?.text = "Bienvenido/a ${cliente.getNombre()}"
         Log.d("MainActivity", "Cliente: $cliente")
+
+
+
+
 
 
         binding.btnPosicionGlobal?.setOnClickListener {
@@ -67,7 +87,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         // Botón para Cajeros
         binding.btnCajeros?.setOnClickListener {
-            Toast.makeText(this, "Función promociones en desarrollo.", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, AtmManagementActivity::class.java)
+            startActivity(intent)
         }
 
 
@@ -141,12 +162,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 //por hacer
             }
             R.id.nav_cajeros -> {
-                //por hacer
-                Log.d("MainActivity", "Cajeros menu clicked")
-                /*
-                * val intent = Intent(this, CajerosActivity::class.java)
+                val intent = Intent(this, AtmManagementActivity::class.java)
                 startActivity(intent)
-                * */
             }
             R.id.nav_logout -> {
                 Log.d("MainActivity", "Logout menu clicked")

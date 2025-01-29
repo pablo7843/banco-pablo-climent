@@ -52,4 +52,17 @@
     <string name="open">Open\n</string>
     <string name="close">Close</string>
     <string name="escribeCuenta">Número de cuenta:</string>
+    <string name="borrar">Borrar\n</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="gestionar_cajeros">Gestionar ATM\'S</string>
+    <string name="direccion">Direccion</string>
+    <string name="latitud">Latitud</string>
+    <string name="longitud">Longitud</string>
+    <string name="guardar">Guardar</string>
+    <string name="lista_de_cajeros">Lista de cajeros:</string>
+    <string name="elige_el_cajero">Elige un cajero:</string>
+    <string name="borrar_cajero">Borrar cajero</string>
+    <string name="confirmacion_eliminar_este_cajero">Confirmacion para eliminar este cajero</string>
+    <string name="anyadir_cajeros">Añadir cajeros</string>
+    <string name="mapa_de_cajeros">Mapa de cajeros</string>
 </resources>
