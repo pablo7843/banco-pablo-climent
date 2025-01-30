@@ -77,7 +77,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         // Botón para Cambiar Clave
         binding.btnCambiarClave?.setOnClickListener {
-            Toast.makeText(this, "Función cambiar clave en desarrollo.", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, ChangePasswordActivity::class.java)
+            intent.putExtra("Cliente", cliente)
+            startActivity(intent)
         }
 
         // Botón para Promociones
@@ -153,10 +155,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.nav_change_password ->{
                 Log.d("MainActivity", "Change password menu clicked")
-                /*
-                * val intent = Intent(this, ChangePasswordActivity::class.java)
+                val intent = Intent(this, ChangePasswordActivity::class.java)
+                intent.putExtra("Cliente", cliente)
                 startActivity(intent)
-                * */
             }
             R.id.nav_promociones -> {
                 //por hacer

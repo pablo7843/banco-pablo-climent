@@ -8,6 +8,12 @@
     <color name="gris_medio">#6c6c6c</color>
     <color name="rojo">#d94040</color>
     <color name="gris_claro">#d8d8d8</color>
+    <color name="primaryColor">#6200EE</color>
+    <color name="gray">#808080</color>
+    <color name="colorInicio">#B3E5FC</color>    <!-- Naranja -->
+    <color name="colorMedio">#C8E6C9</color>     <!-- Amarillo -->
+    <color name="colorFin">#E1BEE7</color>
+
 
 
 

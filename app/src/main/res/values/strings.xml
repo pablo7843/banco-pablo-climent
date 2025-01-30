@@ -65,4 +65,7 @@
     <string name="confirmacion_eliminar_este_cajero">Confirmacion para eliminar este cajero</string>
     <string name="anyadir_cajeros">Añadir cajeros</string>
     <string name="mapa_de_cajeros">Mapa de cajeros</string>
+    <string name="cambiar">Cambiar contraseña</string>
+    <string name="introduceContrasenaActual">Contraseña actual:</string>
+    <string name="contrasenaNueva">Contraseña nueva:</string>
 </resources>

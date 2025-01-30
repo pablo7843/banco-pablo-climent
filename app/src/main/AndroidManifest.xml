@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <!-- si no se pone le AtmApplication no se inicializa y no funciona la app -->
+
     <application
         android:name=".AtmApplication"
         android:allowBackup="true"
@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.T3a3climentpablo"
         tools:targetApi="31">
+        <activity
+            android:name=".activities.ChangePasswordActivity"
+            android:exported="false" />
         <activity
             android:name=".activities.AtmManagementActivity"
             android:exported="false" />

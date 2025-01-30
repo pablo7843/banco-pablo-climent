@@ -7,7 +7,8 @@
     android:padding="16dp"
     android:id="@+id/mainView"
     tools:context=".activities.LoginActivity"
-    android:background="@drawable/fondo">
+    android:background="@drawable/foto_degradado"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +34,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_margin="20dp"
             app:boxStrokeColor="@color/purple"
             app:boxStrokeWidth="2dp"
             app:boxBackgroundMode="outline">
@@ -50,7 +51,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_margin="20dp"
             app:boxStrokeColor="@color/purple"
             app:boxStrokeWidth="2dp"
             app:boxBackgroundMode="outline">
